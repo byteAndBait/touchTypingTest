@@ -7,7 +7,7 @@ Features to be Added
 
 const modifiers = ["Shift", "CapsLock" , "Tab" , "Control", "Alt", "Meta"]
 let keyboard = document.querySelector(".keyboard");
-let text = "teez amar is the redest teeeeez ever made "
+let text = `a b c d e f g h i j k l m o p q r s t u v w x y z`
 let convertedText = text
   .split("")
   .map((a) => (a = `<span>${a}</span>`))

@@ -1,4 +1,12 @@
 /* Global Rules */
+:root{
+    --primary-color: rgb(84, 138, 255);
+}
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+}
 body{
     font-family: sans-serif;
     display:flex;
@@ -9,29 +17,28 @@ body{
 }
 .text{
     display: flex;
-    gap: 10px;
     max-width: 90vw;
     flex-wrap: wrap;
 }
 
 .text span{
-    background-color: silver;
-    font-size: 2rem;
-    padding: 10px 5px;
-    width: 2ch;
-    display: grid;
-    place-items: center;
+    font-size: 3rem;
+    min-width: 15px;
+    transition: .2s;
+}
+.text span::selection{
+    background:none;
 }
 .correct{
-    background-color: green!important   ;
-    border-bottom: solid 10px lime;
+    background-color: rgba(0, 255, 0, 0.336);
+    border-bottom: solid 5px rgb(0, 182, 0);
 }
 .false{
-    background-color: red!important;
-    border-bottom: solid 10px darkred;
+    background-color: rgba(255, 0, 0, 0.363);
+    border-bottom: solid 5px darkred;
 }
 .input{
-    background-color: rgb(84, 138, 255)!important;
+    border-bottom: solid 5px  var(--primary-color)!important;
 }
 
 /* Keyboard preview */
@@ -69,6 +76,7 @@ body{
     margin-right: 80px;
 }
 .keyboard span[data-key="Enter"]{
+    box-sizing: content-box;
     position: absolute;
     width:50px;
     height: 80px;
@@ -79,5 +87,6 @@ body{
     font-size: .8rem;
 }
 .active{
-    background-color: yellow!important;
+    background-color: var(--primary-color)!important;
+    color: white;
 }
