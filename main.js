@@ -2,7 +2,8 @@
 Bugs to be fixed
     - 
 Features to be Added
-    - keyboard preview
+    - upper case for preview keyboard
+    - add your own text
 */
 
 const modifiers = ["Shift", "CapsLock" , "Tab" , "Control", "Alt", "Meta"]
@@ -27,7 +28,9 @@ document.addEventListener("keydown", function main(e) {
 
   // keyboard preview
   keyboard.querySelector(`span[data-key="${e.code}"]`).classList.add("active")
-
+  if(key == "Shift"){
+    
+  }
 
   if(modifiers.includes(key)){
     e.preventDefault()
@@ -85,4 +88,18 @@ document.addEventListener("keydown", function main(e) {
 
 document.addEventListener("keyup", function main(e) {
   keyboard.querySelector(`span[data-key="${e.code}"]`).classList.remove("active")
+})
+
+
+
+// Adding custom text
+let customTextContainer = document.querySelector(".customTextContainer")
+let customTextWrapper = document.querySelector("customTextWrapper") 
+document.addEventListener("click", (e)=>{
+  if(e.target.classList.contains("custom")){
+    e.preventDefault()
+  }else{
+    customTextContainer.style.cssText = "display:none" 
+    customTextWrapper.style.cssText = "display:none;"
+  }
 })
