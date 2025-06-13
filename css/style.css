@@ -1,0 +1,29 @@
+body{
+    font-family: sans-serif;
+}
+.text{
+    display: flex;
+    gap: 10px;
+    max-width: 90vw;
+    flex-wrap: wrap;
+}
+
+.text span{
+    background-color: silver;
+    font-size: 2rem;
+    padding: 10px 5px;
+    width: 2ch;
+    display: grid;
+    place-items: center;
+}
+.correct{
+    background-color: green!important   ;
+    border-bottom: solid 10px lime;
+}
+.false{
+    background-color: red!important;
+    border-bottom: solid 10px darkred;
+}
+.input{
+    background-color: rgb(84, 138, 255)!important;
+}
