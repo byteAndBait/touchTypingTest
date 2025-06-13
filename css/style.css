@@ -78,3 +78,6 @@ body{
 .keyboard span[data-key="CapsLock"]{
     font-size: .8rem;
 }
+.active{
+    background-color: yellow!important;
+}
