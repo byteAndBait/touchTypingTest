@@ -151,12 +151,13 @@ header button.addCustomText{
     padding: 10px 20px;
     font-size: 1rem;
     margin-top: 10px;
+    cursor: pointer;
 }
-.customTextContainer button.customTextok{
+.customTextContainer button.customTextOk{
     background-color: green;
     color: white;
 }
-.customTextContainer button.customTextno{
+.customTextContainer button.customTextNo{
     background-color: red;
     color: white;
 }
